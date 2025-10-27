@@ -54,13 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
         let content = '';
         if (message.text) {
-            // Mengubah barDetails
-            let processedText = message.text.replace(/\*/g, '');
-            processedText = processedText.replace(/\n(?=\d+\.)/g, '<br><br>');
-            processedText = processedText.replace(/\n/g, '<br>');
+            // Mengubah barDetails
+            let processedText = message.text
+                .replace(/\*/g, '')  
+                .replace(/#/g, '');   
+            
+            processedText = processedText.replace(/\n(?=\d+\.)/g, '<br><br>');
+            processedText = processedText.replace(/\n/g, '<br>');
 
-            content += `<p>${processedText}</p>`;
-        }
+            content += `<p>${processedText}</p>`;
+        }
         if (message.options) {
             content += '<div class="chat-options">';
             message.options.forEach(opt => {
@@ -361,4 +364,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
