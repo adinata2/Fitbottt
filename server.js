@@ -1,6 +1,4 @@
 // Import library yang dibutuhkan
-const path = require('path');
-app.use(express.static(path.join(__dirname)));
 const express = require('express');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const dotenv = require('dotenv');
@@ -13,6 +11,8 @@ dotenv.config();
 const app = express();
 app.use(cors()); // Mengaktifkan CORS
 app.use(express.json()); // Middleware untuk membaca JSON dari request body
+const path = require('path');
+app.use(express.static(path.join(__dirname)));
 
 // Inisialisasi model Gemini
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -60,5 +60,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server berjalan di http://localhost:${PORT}`);
 });
+
 
 
