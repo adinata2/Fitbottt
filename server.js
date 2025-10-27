@@ -1,4 +1,6 @@
 // Import library yang dibutuhkan
+const path = require('path');
+app.use(express.static(path.join(__dirname)));
 const express = require('express');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const dotenv = require('dotenv');
@@ -55,7 +57,8 @@ app.post('/chat', async (req, res) => {
 
 // Jalankan server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server berjalan di http://localhost:${PORT}`);
 });
+
 
