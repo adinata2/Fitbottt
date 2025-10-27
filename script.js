@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatBox = document.getElementById('chat-box');
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
-    const chatApiUrl = 'http://192.168.56.1:3000/chat';
+    const chatApiUrl = 'http://192.168.100.6:3000/chat';
 
     let onboardingState = 'IDLE';
     
@@ -364,6 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 
