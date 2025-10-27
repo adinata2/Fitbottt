@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBot Dashboard</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="splash-screen" id="splash-screen">
+        <div class="splash-logo">
+            <i class="fa-solid fa-dumbbell"></i>
+        </div>
+        <h1 class="splash-title">Fitbot</h1>
+        <p class="splash-subtitle">Asisten kebugaran virtual Anda untuk hidup lebih sehat</p>
+        <button class="splash-btn" id="open-chat-modal-btn">Get Healthier</button>
+    </div>
+
+    <div class="app-container" style="display: none;">
+        </div>
+
+    <div class="modal-overlay" id="chat-modal-overlay">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-header-logo">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <div class="chat-header-title">
+                    <h1>FitBot</h1>
+                    <p>Asisten Kebugaran Virtual Anda</p>
+                </div>
+            </div>
+            
+            <div class="chat-box" id="chat-box">
+                </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Ketik pesan atau jawaban Anda...">
+                <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
