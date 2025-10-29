@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatBox = document.getElementById('chat-box');
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
-    const chatApiUrl = 'https://backend-fitbot.vercel.app/chat';
+    const chatApiUrl = 'https://backend-fitbot-2.vercel.app/chat';
 
     let onboardingState = 'IDLE';
     
@@ -364,6 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 
